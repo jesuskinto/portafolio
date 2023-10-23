@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,20 +10,154 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+body {
+  font-family: DM Sans;
+  background: #0c1c2b;
+  color: var(--white, #EFFCFF);
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+section {
+  height: 843px;
+  padding: 39px 84px;
+  position: relative;
+}
+
+h1 {
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+h2 {
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 31px;
+}
+
+p {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 165.2%;
+  /* 39.648px */
+}
+
+.HeaderSection {
+  position: relative;
+}
+
+.HeaderSection .SuperHi {
+  position: absolute;
+  font-size: 500px;
+  top: 20px;
+  right: 20px;
+  color: #163957;
+}
+
+.HeaderSection .HeaderSectionItem {
+  display: flex;
+  width: 450px;
+  justify-content: space-between;
+  font-size: 16px;
+}
+
+.HeaderSection .HeaderSectionItem a {
+  transition: color ease 1s;
+  color: #163957;
+}
+
+.HeaderSection .HeaderSectionItem a:hover {
+  color: var(--white, #EFFCFF);
+}
+
+.HeaderSection img.background {
+  height: 843px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.HeaderSection .main {
+  position: absolute;
+  width: 525px;
+  height: 200px;
+}
+
+.HeaderSection .main img {
+  width: 139px;
+  height: 139px;
+  border-radius: 50%;
+  border: solid 5px #F6683C;
+}
+
+.HeaderSection p {
+  color: var(--white, #EFFCFF);
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.AboutSection p {
+  width: 950px;
+}
+
+.AboutSection .full {
+  height: 843px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.StackSection {
+  height: 460px;
+}
+
+.StackSection .StackSectionWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.StackSection .StackSectionWrapper .StackItem {
+  width: 349px;
+  height: 240px;
+  display: flex;
+  align-items: center
+}
+
+.StackSection .StackSectionWrapper .StackItem li {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+
+.StackSection .StackSectionWrapper .StackItem .StackItemBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #183A58;
+  width: 210px;
+  height: 210px;
+  padding: 31px 29px;
+  margin-right: 20px;
+}
+
+.StackSection .StackSectionWrapper .StackItem .StackItemBox img {
+  width: 65px;
+  height: 65px;
+  margin-bottom: 20px;
+}
+
+.StackSection .StackSectionWrapper .StackItem .StackItemBox span {
+  color: #F6683C;
+  position: relative;
+  top: 20px;
+}
+
+.AboutSection,
+.project {
+  background: rgba(24, 58, 88, 0.20);
 }
